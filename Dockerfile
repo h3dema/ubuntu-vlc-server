@@ -15,7 +15,7 @@ RUN mkdir /VIDEOS
 RUN mv load_videos.sh /VIDEOS
 RUN mv ativa_vlm.sh /VIDEOS
 RUN mv vlc.sh  /VIDEOS
-ln -s /VIDEOS/vlc.sh /etc/rc2.d/S99vlc
+RUN ln -s /VIDEOS/vlc.sh /etc/rc2.d/S99vlc
 
 RUN /VIDEOS
 RUN chmod 755 ativa_vlm.sh
