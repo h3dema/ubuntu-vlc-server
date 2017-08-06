@@ -1,0 +1,14 @@
+# VLC media player VLM command batch
+# http://www.videolan.org/vlc/
+
+new BBB_480 vod enabled
+setup BBB_480 input "file:///VIDEOS/big_buck_bunny_480p_stereo.avi"
+setup BBB_480 option file-caching=300
+
+new BBB_720 vod enabled
+setup BBB_720 input "file:///VIDEOS/big_buck_bunny_720p_stereo.avi"
+setup BBB_720 option file-caching=300
+
+new BBB_1080 vod enabled
+setup BBB_1080 input "file:///VIDEOS/big_buck_bunny_1080p_stereo.avi"
+setup BBB_1080 option file-caching=300
