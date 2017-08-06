@@ -1,0 +1,31 @@
+#! /bin/sh
+### BEGIN INIT INFO
+# Provides:          vlc server (video on demand)
+# Required-Start:
+# Required-Stop:
+# Default-Start:
+# Default-Stop:      0
+# Short-Description: Execute the vlc to provide video on demand, loads /home/winet/Documents/videos1.vlm
+# Description:
+### END INIT INFO
+
+PATH=/sbin:/usr/sbin:/bin:/usr/bin
+
+do_stop() {
+        pkill vlc
+}
+
+case "$1" in
+  start)
+        # No-op
+        #do_stop
+        su winet -c /VLC/ativa_vlm.sh
+        ;;
+  stop)
+        do_stop
+        ;;
+  *)
+        echo "Usage: $0 start|stop" >&2
+        exit 1
+        ;;
+esac
